@@ -66,7 +66,7 @@ class Pet {
     }
 
     static getOwnerById(pet, owners) {
-        let foundOwner; // Why only a ;?
+        let foundOwner;
         for (let i = 0; i < owners.length; i++) {
             const owner = owners[i];
             if (owner.id === pet.ownerId) {
@@ -89,7 +89,8 @@ let owners = [
 
 let myPet = [
     new Pet("Dog", 5, 21),
-    new Pet("Cat", 5, 30)
+    new Pet("Cat", 4, 30),
+    new Pet("Dolphin", 7, 90)
 ]
 console.log(Pet.getOwnerById(myPet[1], owners));
 
@@ -97,6 +98,10 @@ console.log(Pet.getOwnerById(myPet[1], owners));
 class Square {
     constructor(sideLength) {
         this.sideLength = sideLength
+    }
+
+    get sqaured () {
+        return this.sideLength * 2
     }
 }
 let sq = new Square(10);
